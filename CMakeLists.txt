@@ -25,6 +25,10 @@ set(CMAKE_CXX_STANDARD 17)
 # Build Game Executable
 add_executable(raylib_main main.cpp)
 
+if(NOT DEFINED ${PLATFORM})
+    set(PLATFORM Desktop)
+endif()
+
 # Link with Raylib
 CPMAddPackage(NAME raylib 
     GITHUB_REPOSITORY raysan5/raylib 
@@ -34,8 +38,4 @@ CPMAddPackage(NAME raylib
 
 target_include_directories(raylib_main PRIVATE ${raylib_SOURCE_DIR}/src)
 target_link_libraries(raylib_main PRIVATE raylib)
-
-if(NOT DEFINED ${PLATFORM})
-    set(PLATFORM Desktop)
-endif()
 
