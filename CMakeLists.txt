@@ -36,7 +36,7 @@ CPMAddPackage(NAME raylib
     OPTIONS "PLATFORM ${PLATFORM}" "CMAKE_BUILD_TYPE MinSizeRel"
 )
 
-target_include_directories(raylib_main PRIVATE ${raylib_SOURCE_DIR}/src src)
+target_include_directories(raylib_main PRIVATE ${raylib_SOURCE_DIR}/src)
 target_link_libraries(raylib_main PRIVATE raylib)
 
 

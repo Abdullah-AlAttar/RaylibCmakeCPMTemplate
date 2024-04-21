@@ -1,9 +1,0 @@
-{
-    "files.associations": {
-        "*.ter": "lua",
-        "*.js": "javascriptreact",
-        "*.log": "log",
-        "*.bak": "log",
-        "vector": "cpp"
-    }
-}
